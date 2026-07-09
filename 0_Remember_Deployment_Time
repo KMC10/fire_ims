@@ -1,0 +1,15 @@
+1. Table - EmployeeUser - Employee VS User - Must have user an entry at this table for user assign to an employee
+2. should have employee type.
+3. You should have data at tables - 
+	a. Privileges
+	b. Roles
+	c. RolePrivileges
+	d. RoleUsers
+	e. User
+	f. UserRight
+	
+	
+	
+	
+	
+	

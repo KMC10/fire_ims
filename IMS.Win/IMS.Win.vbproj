@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57FD8A82-6B6C-4702-B442-1E1963AFDC39}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>IMS.Win.My.MyApplication</StartupObject>
+    <RootNamespace>IMS.Win</RootNamespace>
+    <AssemblyName>IMS.Win</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>IMS.Win.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>IMS.Win.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\CrystalReport\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\CrystalReport\CrystalDecisions.ReportSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\CrystalReport\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\CrystalReport\CrystalDecisions.Windows.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\CrystalReport\FlashControlV71.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v12.1, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Shared.v12.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v12.1, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Win.Misc.v12.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraChart.v12.1.Design, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Win.UltraChart.v12.1.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinChart.v12.1, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Win.UltraWinChart.v12.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinDataSource.v12.1, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Win.UltraWinDataSource.v12.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinDock.v12.1, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Win.UltraWinDock.v12.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v12.1, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Win.UltraWinEditors.v12.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v12.1, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Win.UltraWinExplorerBar.v12.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.ExcelExport.v12.1, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Win.UltraWinGrid.ExcelExport.v12.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v12.1, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Win.UltraWinGrid.v12.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinListBar.v12.1, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Win.UltraWinListBar.v12.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinListView.v12.1, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Win.UltraWinListView.v12.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v12.1, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Win.UltraWinStatusBar.v12.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v12.1, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Win.UltraWinTabbedMdi.v12.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Infragistics4.Win.v12.1, Version=12.1.20121.2008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Infragistics\Infragistics4.Win.v12.1.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\ApplianceManager.vb" />
+    <Compile Include="Utility\CommonFunctions.vb" />
+    <Compile Include="Code\Converter.vb" />
+    <Compile Include="Code\DBManager.vb" />
+    <Compile Include="frmMain.designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helper\ApplianceAttending.vb" />
+    <Compile Include="Helper\CasualtiesForReport.vb" />
+    <Compile Include="Helper\CommonFunction.vb" />
+    <Compile Include="Helper\MonthlyReport.vb" />
+    <Compile Include="Helper\PersonAttending.vb" />
+    <Compile Include="Helper\PersonRescuedForReport.vb" />
+    <Compile Include="IMSConstant\CentralBoardDisplay.vb" />
+    <Compile Include="IMSConstant\IMSConstant.vb" />
+    <Compile Include="IMSConstant\SystemMessages.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="My Project\Settings1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\crptFalseAlarm.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptFalseAlarm.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crptFire.vb">
+      <DependentUpon>crptFire.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Reports\crptGrassFire.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptGrassFire.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crptSpecialService.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptSpecialService.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crptStandby.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptStandby.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\crptStatistics.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptStatistics.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptMonthlyFinal.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMonthlyFinal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptMonthlyReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptSubCasualties.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSubCasualties.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptSubPersonnel.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSubPersonnel.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptSubPersonnelShortWidth.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSubPersonnelShortWidth.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptSubPersonsRescued.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSubPersonsRescued.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\subRptFireServiceAppliance.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>subRptFireServiceAppliance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\subRptFireServiceApplianceShortWidth.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>subRptFireServiceApplianceShortWidth.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Test.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Test.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\BaseForm.Designer.vb">
+      <DependentUpon>BaseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmBulkCheckInOut.Designer.vb">
+      <DependentUpon>frmBulkCheckInOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmBulkCheckInOut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+<Compile Include="UI\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAddEmployee.Designer.vb">
+      <DependentUpon>frmAddEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAddEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAddIncident.Designer.vb">
+      <DependentUpon>frmAddIncident.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAddIncident.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAddIncidentCategory.Designer.vb">
+      <DependentUpon>frmAddIncidentCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAddIncidentCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAddIncidentType.Designer.vb">
+      <DependentUpon>frmAddIncidentType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAddIncidentType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAddResolvedIncident.Designer.vb">
+      <DependentUpon>frmAddResolvedIncident.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAddResolvedIncident.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAddShift.Designer.vb">
+      <DependentUpon>frmAddShift.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAddShift.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAddUser.Designer.vb">
+      <DependentUpon>frmAddUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAddUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAddVehicle.Designer.vb">
+      <DependentUpon>frmAddVehicle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAddVehicle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAddVehicleInStation.Designer.vb">
+      <DependentUpon>frmAddVehicleInStation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAddVehicleInStation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmDispatchVehicles.Designer.vb">
+      <DependentUpon>frmDispatchVehicles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmDispatchVehicles.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmEmployeeCheckInOut.Designer.vb">
+      <DependentUpon>frmEmployeeCheckInOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmEmployeeCheckInOut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmIncidentCheckIn.Designer.vb">
+      <DependentUpon>frmIncidentCheckIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmIncidentCheckIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmIncidentRegister.Designer.vb">
+      <DependentUpon>frmIncidentRegister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmIncidentRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmIncidentReport.Designer.vb">
+      <DependentUpon>frmIncidentReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmIncidentReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmIncidentTypeAndVehicleMapping.Designer.vb">
+      <DependentUpon>frmIncidentTypeAndVehicleMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmIncidentTypeAndVehicleMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmOccurrenceBook.Designer.vb">
+      <DependentUpon>frmOccurrenceBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmOccurrenceBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmPark.Designer.vb">
+      <DependentUpon>frmPark.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmPark.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmRevokeReason.Designer.vb">
+      <DependentUpon>frmRevokeReason.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmRevokeReason.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmShiftCheckIn.Designer.vb">
+      <DependentUpon>frmShiftCheckIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmShiftCheckIn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmShowReport.Designer.vb">
+      <DependentUpon>frmShowReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmShowReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmStation.Designer.vb">
+      <DependentUpon>frmStation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmStation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmStationDashBoard.Designer.vb">
+      <DependentUpon>frmStationDashBoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmStationDashBoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmTimeOfArrival.Designer.vb">
+      <DependentUpon>frmTimeOfArrival.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmTimeOfArrival.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmVehicleCheckInOut.Designer.vb">
+      <DependentUpon>frmVehicleCheckInOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmVehicleCheckInOut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmViewCurrentDispatchList.Designer.vb">
+      <DependentUpon>frmViewCurrentDispatchList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmViewCurrentDispatchList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmViewDispatchLog.Designer.vb">
+      <DependentUpon>frmViewDispatchLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmViewDispatchLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmViewEmployee.Designer.vb">
+      <DependentUpon>frmViewEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmViewEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmViewIncidentCategory.Designer.vb">
+      <DependentUpon>frmViewIncidentCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmViewIncidentCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmViewIncidentType.Designer.vb">
+      <DependentUpon>frmViewIncidentType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmViewIncidentType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmViewMonthlyReport.Designer.vb">
+      <DependentUpon>frmViewMonthlyReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmViewMonthlyReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmViewShift.Designer.vb">
+      <DependentUpon>frmViewShift.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmViewShift.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmViewStation.Designer.vb">
+      <DependentUpon>frmViewStation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmViewStation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmViewUser.Designer.vb">
+      <DependentUpon>frmViewUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmViewUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmViewVehicleAppliance.Designer.vb">
+      <DependentUpon>frmViewVehicleAppliance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmViewVehicleAppliance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmViewVehicleInStation.Designer.vb">
+      <DependentUpon>frmViewVehicleInStation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmViewVehicleInStation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utility\UserUtil.vb" />
+    <Compile Include="Web References\IMSService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crptFalseAlarm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptFalseAlarm.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crptFire.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptFire.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crptGrassFire.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptGrassFire.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crptSpecialService.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptSpecialService.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crptStandby.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptStandby.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\crptStatistics.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptStatistics.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMonthlyFinal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMonthlyFinal.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptSubCasualties.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSubCasualties.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptSubPersonnel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSubPersonnel.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptSubPersonnelShortWidth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSubPersonnelShortWidth.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptSubPersonsRescued.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSubPersonsRescued.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\subRptFireServiceAppliance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>subRptFireServiceAppliance.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\subRptFireServiceApplianceShortWidth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>subRptFireServiceApplianceShortWidth.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Test.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Test.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmBulkCheckInOut.resx">
+      <DependentUpon>frmBulkCheckInOut.vb</DependentUpon>
+    </EmbeddedResource>
+<EmbeddedResource Include="UI\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAddEmployee.resx">
+      <DependentUpon>frmAddEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAddIncident.resx">
+      <DependentUpon>frmAddIncident.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAddIncidentCategory.resx">
+      <DependentUpon>frmAddIncidentCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAddIncidentType.resx">
+      <DependentUpon>frmAddIncidentType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAddResolvedIncident.resx">
+      <DependentUpon>frmAddResolvedIncident.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAddShift.resx">
+      <DependentUpon>frmAddShift.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAddUser.resx">
+      <DependentUpon>frmAddUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAddVehicle.resx">
+      <DependentUpon>frmAddVehicle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAddVehicleInStation.resx">
+      <DependentUpon>frmAddVehicleInStation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmDispatchVehicles.resx">
+      <DependentUpon>frmDispatchVehicles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmEmployeeCheckInOut.resx">
+      <DependentUpon>frmEmployeeCheckInOut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmIncidentCheckIn.resx">
+      <DependentUpon>frmIncidentCheckIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmIncidentRegister.resx">
+      <DependentUpon>frmIncidentRegister.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmIncidentReport.resx">
+      <DependentUpon>frmIncidentReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmIncidentTypeAndVehicleMapping.resx">
+      <DependentUpon>frmIncidentTypeAndVehicleMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmOccurrenceBook.resx">
+      <DependentUpon>frmOccurrenceBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmPark.resx">
+      <DependentUpon>frmPark.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmRevokeReason.resx">
+      <DependentUpon>frmRevokeReason.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmShiftCheckIn.resx">
+      <DependentUpon>frmShiftCheckIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmShowReport.resx">
+      <DependentUpon>frmShowReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmStation.resx">
+      <DependentUpon>frmStation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmStationDashBoard.resx">
+      <DependentUpon>frmStationDashBoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmTimeOfArrival.resx">
+      <DependentUpon>frmTimeOfArrival.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmVehicleCheckInOut.resx">
+      <DependentUpon>frmVehicleCheckInOut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmViewCurrentDispatchList.resx">
+      <DependentUpon>frmViewCurrentDispatchList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmViewDispatchLog.resx">
+      <DependentUpon>frmViewDispatchLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmViewEmployee.resx">
+      <DependentUpon>frmViewEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmViewIncidentCategory.resx">
+      <DependentUpon>frmViewIncidentCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmViewIncidentType.resx">
+      <DependentUpon>frmViewIncidentType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmViewMonthlyReport.resx">
+      <DependentUpon>frmViewMonthlyReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmViewShift.resx">
+      <DependentUpon>frmViewShift.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmViewStation.resx">
+      <DependentUpon>frmViewStation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmViewUser.resx">
+      <DependentUpon>frmViewUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmViewVehicleAppliance.resx">
+      <DependentUpon>frmViewVehicleAppliance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmViewVehicleInStation.resx">
+      <DependentUpon>frmViewVehicleInStation.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\IMSService\Appliance.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\ApplianceMapping.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\ApplianceRegister.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\ApplianceRider.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\AssignedAppliance.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\AssignedEmployee.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\AssignedFireStation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\AssignedIncidentType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\Casualities.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\DispatchLog.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\Employee.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\EmployeeRegister.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\EmployeeType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\EmployeeUser.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\FireStation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\FireStationAppliance.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\Group.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\IMSServices.wsdl" />
+    <None Include="Web References\IMSService\IncidentCategory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\IncidentRegister.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\IncidentType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\IncidentTypeIncident.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\OccurrenceBook.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\PersonsRescuedAndEscaping.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\Privileges.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\IMSService\RolePrivileges.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\Roles.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\RoleUsers.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\Shift.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\StationIncident.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\UserRight.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\IMSService\Users.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\employee.png" />
+    <Content Include="Resources\incident register1.png" />
+    <Content Include="Resources\Next.png" />
+    <Content Include="Resources\Previous.png" />
+    <Content Include="Resources\shift.png" />
+    <Content Include="Resources\vehicle1%2864%292.png" />
+    <None Include="Web References\IMSService\IMSServices.disco" />
+    <None Include="Resources\add incident.png" />
+    <None Include="Resources\add incident1.png" />
+    <Content Include="Resources\Add.png" />
+    <None Include="Resources\station.png" />
+    <None Include="Resources\incident type.png" />
+    <None Include="Resources\incident category.png" />
+    <None Include="Resources\vehicle mapping.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\incident register.png" />
+    <None Include="Resources\occurrence book.png" />
+    <None Include="Resources\dashboard.png" />
+    <None Include="Resources\shift check in.png" />
+    <None Include="Resources\vehicle check in.png" />
+    <None Include="Resources\vehicle check out.png" />
+    <None Include="Resources\employee check in.png" />
+    <None Include="Resources\employee checkIN.png" />
+    <None Include="Resources\fire report.png" />
+    <None Include="Resources\special service.png" />
+    <None Include="Resources\false alarm.png" />
+    <None Include="Resources\standby.png" />
+    <None Include="Resources\monthly statistics.png" />
+    <None Include="Resources\common.png" />
+    <Content Include="Resources\common1.png" />
+    <Content Include="Resources\dashboard1.png" />
+    <Content Include="Resources\employee check in%281%29.png" />
+    <Content Include="Resources\employee check in%281%291.png" />
+    <Content Include="Resources\employee check in1.png" />
+    <Content Include="Resources\employee check out%281%29.png" />
+    <Content Include="Resources\employee check out%281%291.png" />
+    <Content Include="Resources\employee check out.png" />
+    <Content Include="Resources\employee check out1.png" />
+    <Content Include="Resources\false alarm1.png" />
+    <Content Include="Resources\fire report1.png" />
+    <Content Include="Resources\incident category1.png" />
+    <Content Include="Resources\incident type1.png" />
+    <Content Include="Resources\monthly statistics1.png" />
+    <Content Include="Resources\occurrence book1.png" />
+    <Content Include="Resources\shift check in1.png" />
+    <Content Include="Resources\special service1.png" />
+    <Content Include="Resources\standby1.png" />
+    <Content Include="Resources\station1.png" />
+    <Content Include="Resources\user1.png" />
+    <Content Include="Resources\vehicle assignment.png" />
+    <Content Include="Resources\vehicle assignment1.png" />
+    <Content Include="Resources\vehicle check in1.png" />
+    <Content Include="Resources\vehicle check out1.png" />
+    <Content Include="Resources\vehicle mapping1.png" />
+    <Content Include="Resources\vehicle1%2848%29.png" />
+    <Content Include="Resources\vehicle1%2848%291.png" />
+    <Content Include="Resources\vehicle1%2848%292.png" />
+    <Content Include="Resources\vehicle1%2864%29.png" />
+    <Content Include="Resources\vehicle1%2864%291.png" />
+    <None Include="Resources\Save11.png" />
+    <None Include="Resources\Save2.png" />
+    <None Include="Resources\Add1.png" />
+    <Content Include="Resources\Approve.png" />
+    <None Include="Resources\Approve1.png" />
+    <Content Include="Resources\Close.png" />
+    <None Include="Resources\Close1.png" />
+    <Content Include="Resources\Delete.png" />
+    <None Include="Resources\Delete1.png" />
+    <Content Include="Resources\Edit.png" />
+    <None Include="Resources\Edit1.png" />
+    <Content Include="Resources\Export.png" />
+    <None Include="Resources\Export1.png" />
+    <Content Include="Resources\images %281%29.jpg" />
+    <None Include="Resources\images %281%291.jpg" />
+    <Content Include="Resources\Import.png" />
+    <None Include="Resources\Import1.png" />
+    <Content Include="Resources\invoice.png" />
+    <None Include="Resources\invoice1.png" />
+    <Content Include="Resources\Load.png" />
+    <None Include="Resources\Load1.png" />
+    <Content Include="Resources\Print.png" />
+    <None Include="Resources\Print1.png" />
+    <Content Include="Resources\Refresh.png" />
+    <None Include="Resources\Refresh1.png" />
+    <Content Include="Resources\Save.png" />
+    <Content Include="Resources\Save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IMS.Lib\IMS.Lib.vbproj">
+      <Project>{add8fd8a-be1b-47ee-8a22-5f399fb5774a}</Project>
+      <Name>IMS.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:61563/IMSServices.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\IMSService\</RelPath>
+      <UpdateFromURL>http://localhost:61563/IMSServices.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>IMS_Win_IMSService_IMSServices</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

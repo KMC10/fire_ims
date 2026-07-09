@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB9D99D1-280E-499D-A3C1-4F547928AB10}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>IMS.DataAccess</RootNamespace>
+    <AssemblyName>IMS.DataAccess</AssemblyName>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>IMS.DataAccess.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DataAccess.Generator.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FrameworkX.ObjectSpace">
+      <HintPath>..\..\UltraResources\FrameworkX.ObjectSpace.dll</HintPath>
+    </Reference>
+    <Reference Include="system" />
+    <Reference Include="system.data" />
+    <Reference Include="system.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="system.data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\ApplianceDAL.vb" />
+    <Compile Include="DAL\EmployeeDAL.vb" />
+    <Compile Include="DAL\FireStationDAL.vb" />
+    <Compile Include="DAL\IncidentDAL.vb" />
+    <Compile Include="DAL\LoginDAL.vb" />
+    <Compile Include="DAL\RiderDAL.vb" />
+    <Compile Include="DBHelper\KeyGen.vb" />
+    <Compile Include="DTO\ApplianceMapping.vb" />
+    <Compile Include="DTO\ApplianceRegister.vb" />
+    <Compile Include="DTO\AssignedEmployee.vb" />
+    <Compile Include="DTO\Casualities.vb" />
+    <Compile Include="DTO\DispatchLog.vb" />
+    <Compile Include="DTO\EmployeeRegister.vb" />
+    <Compile Include="DTO\FireStationAppliance.vb" />
+    <Compile Include="DTO\Group.vb" />
+    <Compile Include="DTO\IncidentCategory.vb" />
+    <Compile Include="DTO\IncidentTypeIncident.vb" />
+    <Compile Include="DTO\OccurrenceBook.vb" />
+    <Compile Include="DTO\PersonsRescuedAndEscaping.vb" />
+    <Compile Include="DTO\Privileges.vb" />
+    <Compile Include="DTO\Reference.vb" />
+    <Compile Include="DTO\ReferenceNo.vb" />
+    <Compile Include="DTO\RolePrivileges.vb" />
+    <Compile Include="DTO\Roles.vb" />
+    <Compile Include="DTO\RoleUsers.vb" />
+    <Compile Include="DTO\Shift.vb" />
+    <Compile Include="DTO\StationIncident.vb" />
+    <Compile Include="DTO\UserRight.vb" />
+    <Compile Include="DTO\Users.vb" />
+    <Compile Include="DTO\IncidentMessage.vb" />
+    <Compile Include="DTO\AssignedAppliance.vb" />
+    <Compile Include="DTO\AssignedFireStation.vb" />
+    <Compile Include="DTO\AssignedIncidentType.vb" />
+    <Compile Include="DTO\IncidentRegister.vb" />
+    <Compile Include="DTO\ApplianceRider.vb" />
+    <Compile Include="DTO\Appliance.vb" />
+    <Compile Include="DTO\Employee.vb" />
+    <Compile Include="DTO\EmployeeType.vb" />
+    <Compile Include="DTO\EmployeeUser.vb" />
+    <Compile Include="DTO\FireStation.vb" />
+    <Compile Include="DTO\IncidentType.vb" />
+    <Compile Include="DTO\LoginInfo.vb" />
+    <Compile Include="DTO\Message.vb" />
+    <Compile Include="DAL\DataAccessManager.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Utils\Constants.vb" />
+    <Compile Include="ViewModels\EmployeeIncidentMessage.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+</Project>
