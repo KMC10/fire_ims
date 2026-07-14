@@ -209,6 +209,35 @@ Public Class frmMain
         'CallObject(New frmDashboard)
     End Sub
 
+    'Logout Sub by KMC
+    Private Sub tsbLogout_Click(sender As Object, e As EventArgs) Handles tsbLogout.Click
+
+        Try
+
+            If MsgBox("Are you sure you want to logout?",
+                  MsgBoxStyle.YesNo,
+                  "Logout Confirmation") = MsgBoxResult.Yes Then
+
+                UserUtil.Logout()
+
+                Me.Hide()
+
+                If frmLogin.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                    Me.Show()
+                Else
+                    Me.Close()
+                End If
+
+            End If
+
+        Catch ex As Exception
+            Me.WriteLog(ex)
+            Me.DisplayError(IMSConstants.ExceptionMessage.Message)
+        End Try
+
+    End Sub
+
+
     ''' <summary>
     ''' 
     ''' </summary>

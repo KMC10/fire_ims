@@ -61,5 +61,12 @@ Public Class UserUtil
 
     End Function
 
+    Public Shared Sub Logout()
+
+        _LoggedinUser = Nothing
+        _UserPreviliges.Clear()
+
+    End Sub
+
 
 End Class

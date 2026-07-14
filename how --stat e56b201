@@ -1,0 +1,49 @@
+[33mcommit a2721d9defb3281a36957085c438fd671bfa4cdb[m
+Author: KMC10 <411021348@gms.ndhu.edu.tw>
+Date:   Wed Jul 15 16:49:38 2026 +0200
+
+    Fixed User roles display
+
+ IMS.Lib/Enums/IMSEnums.vb                          |     1 [32m+[m
+ IMS.Server/App_Code/IMSServices.vb                 |   412 [32m+[m[31m-[m
+ IMS.Server/Web.config                              |     2 [32m+[m[31m-[m
+ IMS.Win/IMS.Win.vbproj                             |     3 [32m+[m
+ IMS.Win/UI/frmLogin.vb                             |    48 [32m+[m[31m-[m
+ .../Web References/IMSService/Appliance.datasource |     2 [32m+[m[31m-[m
+ .../IMSService/ApplianceMapping.datasource         |     2 [32m+[m[31m-[m
+ .../IMSService/ApplianceRegister.datasource        |     2 [32m+[m[31m-[m
+ .../IMSService/ApplianceRider.datasource           |     2 [32m+[m[31m-[m
+ .../IMSService/AssignedAppliance.datasource        |     2 [32m+[m[31m-[m
+ .../IMSService/AssignedEmployee.datasource         |     2 [32m+[m[31m-[m
+ .../IMSService/AssignedFireStation.datasource      |     2 [32m+[m[31m-[m
+ .../IMSService/AssignedIncidentType.datasource     |     2 [32m+[m[31m-[m
+ .../IMSService/Casualities.datasource              |     2 [32m+[m[31m-[m
+ .../IMSService/DispatchLog.datasource              |     2 [32m+[m[31m-[m
+ .../Web References/IMSService/Employee.datasource  |     2 [32m+[m[31m-[m
+ .../IMSService/EmployeeRegister.datasource         |     2 [32m+[m[31m-[m
+ .../IMSService/EmployeeType.datasource             |     2 [32m+[m[31m-[m
+ .../IMSService/EmployeeUser.datasource             |     2 [32m+[m[31m-[m
+ .../IMSService/FireStation.datasource              |     2 [32m+[m[31m-[m
+ .../IMSService/FireStationAppliance.datasource     |     2 [32m+[m[31m-[m
+ IMS.Win/Web References/IMSService/Group.datasource |     2 [32m+[m[31m-[m
+ .../Web References/IMSService/IMSServices.disco    |     2 [32m+[m[31m-[m
+ IMS.Win/Web References/IMSService/IMSServices.wsdl |  6049 [32m+++++[m[31m------[m
+ .../IMSService/IncidentCategory.datasource         |     2 [32m+[m[31m-[m
+ .../IMSService/IncidentRegister.datasource         |     2 [32m+[m[31m-[m
+ .../IMSService/IncidentType.datasource             |     2 [32m+[m[31m-[m
+ .../IMSService/IncidentTypeIncident.datasource     |     2 [32m+[m[31m-[m
+ .../IMSService/OccurrenceBook.datasource           |     2 [32m+[m[31m-[m
+ .../PersonsRescuedAndEscaping.datasource           |     2 [32m+[m[31m-[m
+ .../IMSService/Privileges.datasource               |     2 [32m+[m[31m-[m
+ IMS.Win/Web References/IMSService/Reference.map    |     2 [32m+[m[31m-[m
+ IMS.Win/Web References/IMSService/Reference.vb     | 10253 [32m++++++++++[m[31m---------[m
+ .../IMSService/RolePrivileges.datasource           |     2 [32m+[m[31m-[m
+ .../Web References/IMSService/RoleUsers.datasource |     2 [32m+[m[31m-[m
+ IMS.Win/Web References/IMSService/Roles.datasource |     2 [32m+[m[31m-[m
+ IMS.Win/Web References/IMSService/Shift.datasource |     2 [32m+[m[31m-[m
+ .../IMSService/StationIncident.datasource          |     2 [32m+[m[31m-[m
+ .../Web References/IMSService/UserRight.datasource |     2 [32m+[m[31m-[m
+ IMS.Win/Web References/IMSService/Users.datasource |     2 [32m+[m[31m-[m
+ IMS.Win/frmMain.vb                                 |    59 [32m+[m[31m-[m
+ IncidentManagementSystem.sln                       |     6 [32m+[m[31m-[m
+ 42 files changed, 8532 insertions(+), 8367 deletions(-)

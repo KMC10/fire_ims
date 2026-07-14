@@ -283,6 +283,10 @@ Public Class frmLogin
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.txtUserId.Focus()
+
+        txtUserId.Text = ""
+        txtPassword.Text = ""
+        txtPassword.PasswordChar = "*"
     End Sub
 
     Private Sub btnLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLogin.Click

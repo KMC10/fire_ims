@@ -343,7 +343,7 @@
     <Compile Include="UI\frmBulkCheckInOut.vb">
       <SubType>Form</SubType>
     </Compile>
-<Compile Include="UI\Form1.Designer.vb">
+    <Compile Include="UI\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
     <Compile Include="UI\Form1.vb">
@@ -643,10 +643,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Test.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\BaseForm.resx">
+      <DependentUpon>BaseForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmBulkCheckInOut.resx">
       <DependentUpon>frmBulkCheckInOut.vb</DependentUpon>
     </EmbeddedResource>
-<EmbeddedResource Include="UI\Form1.resx">
+    <EmbeddedResource Include="UI\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmAddEmployee.resx">

@@ -148,6 +148,8 @@ Partial Class frmMain
         Me.toolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.toolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbDashboard = New System.Windows.Forms.ToolStripButton()
+        'Logout Creation
+        Me.tsbLogout = New System.Windows.Forms.ToolStripButton()
         Me.toolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuMain = New System.Windows.Forms.MenuStrip()
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
@@ -712,7 +714,7 @@ Partial Class frmMain
         Me.toolStrip1.BackColor = System.Drawing.Color.Gainsboro
         Me.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.toolStrip1.ImageScalingSize = New System.Drawing.Size(30, 30)
-        Me.toolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolStripSeparator1, Me.tsbDashboard, Me.toolStripSeparator2})
+        Me.toolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolStripSeparator1, Me.tsbDashboard, Me.toolStripSeparator2, Me.tsbLogout})
         Me.toolStrip1.Location = New System.Drawing.Point(0, 25)
         Me.toolStrip1.Name = "toolStrip1"
         Me.toolStrip1.Size = New System.Drawing.Size(1189, 38)
@@ -731,6 +733,14 @@ Partial Class frmMain
         Me.tsbDashboard.Name = "tsbDashboard"
         Me.tsbDashboard.Size = New System.Drawing.Size(90, 25)
         Me.tsbDashboard.Text = "Dashboard"
+        '
+        'Logout Button Properties
+        '
+        Me.tsbLogout.AutoSize = False
+        Me.tsbLogout.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbLogout.Name = "tsbLogout"
+        Me.tsbLogout.Size = New System.Drawing.Size(90, 25)
+        Me.tsbLogout.Text = "Logout"
         '
         'toolStripSeparator2
         '
@@ -908,6 +918,9 @@ Partial Class frmMain
     Private WithEvents toolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Private WithEvents tsbDashboard As System.Windows.Forms.ToolStripButton
     Private WithEvents toolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+
+    'Logout button declaration
+    Private WithEvents tsbLogout As System.Windows.Forms.ToolStripButton
     Private WithEvents mnuMain As System.Windows.Forms.MenuStrip
     Private WithEvents mnuFile As System.Windows.Forms.ToolStripMenuItem
     Private WithEvents mnuHelp As System.Windows.Forms.ToolStripMenuItem
