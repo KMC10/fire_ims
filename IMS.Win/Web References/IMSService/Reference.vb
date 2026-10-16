@@ -3758,14 +3758,14 @@ Namespace IMSService
                 RaiseEvent GetUsersByIDCompleted(Me, New GetUsersByIDCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState))
             End If
         End Sub
-        
+
         '''<remarks/>
-        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetFilteredUsers", RequestNamespace:="http://tempuri.org/", ResponseNamespace:="http://tempuri.org/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>  _
+        <System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetFilteredUsers", RequestNamespace:="http://tempuri.org/", ResponseNamespace:="http://tempuri.org/", Use:=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle:=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)>
         Public Function GetFilteredUsers(ByVal sqlFilter As String) As Users()
             Dim results() As Object = Me.Invoke("GetFilteredUsers", New Object() {sqlFilter})
-            Return CType(results(0),Users())
+            Return CType(results(0), Users())
         End Function
-        
+
         '''<remarks/>
         Public Overloads Sub GetFilteredUsersAsync(ByVal sqlFilter As String)
             Me.GetFilteredUsersAsync(sqlFilter, Nothing)

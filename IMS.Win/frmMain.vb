@@ -94,7 +94,7 @@ Public Class frmMain
         'Dim obj As Form
         Dim i As Int16
         Try
-            For i = 0 To Me.ultraTabbedMdiManager.TabGroups(0).Tabs.Count - 1
+            1234For i = 0 To Me.ultraTabbedMdiManager.TabGroups(0).Tabs.Count - 1
                 If Me.ultraTabbedMdiManager.TabGroups(0).Tabs(i).Form.Name = ObjName Then
                     BolFlag = True
                     Me.ultraTabbedMdiManager.TabGroups(0).Tabs(i).Form.Activate()
